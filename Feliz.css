@@ -1,0 +1,49 @@
+body {
+    background-color: rgb(5, 173, 159);
+}
+.Titulo-P{
+    color: rgb(116, 2, 2);
+    font-size: 50px;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.Texto{
+    color: rgb(218, 179, 8);
+    font-size: 30px;
+    text-align: left;
+    margin-top: 100px;
+}
+
+
+button {
+    background-color: rgb(34, 231, 8);   /* color de fondo */
+    color: rgb(252, 252, 252);             /* color del texto */
+    padding: 10px 20px;       /* tamaño interno */
+    border-radius: 10px;      /* bordes redondeados */
+    cursor: pointer;          /* cambia el cursor */
+    border: none;            /* sin borde */
+    font-size: 16px;         /* tamaño del texto */
+    transition: background-color 0.3s, color 0.3s; /* transición suave */
+    position: relative;
+    overflow: hidden;
+}
+button::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(120deg, transparent, rgba(107, 125, 230, 0.6), transparent);
+    top: 0;
+    left: -100%;
+    transition: 0.5s;
+}
+button:hover::before {
+    left: 100%;
+}
+.botns {
+    display: flex;              /* usa flexbox para alinear los botones */
+    justify-content: center;    /* centra los botones horizontalmente */
+    gap: 20px;                 /* espacio entre los botones */
+    margin-top: 50px;          /* espacio superior */
+}
