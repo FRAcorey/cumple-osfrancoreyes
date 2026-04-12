@@ -48,10 +48,6 @@ app.post("/Fotos", upload.array("fotos"), (req, res) => {
     res.send("Imágenes subidas a Cloudinary");
 });
 
-if (!req.files || req.files.length === 0) {
-    return res.send("No se subieron imágenes");
-}
-
 // Iniciar servidor
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
