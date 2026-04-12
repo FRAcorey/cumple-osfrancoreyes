@@ -2,6 +2,8 @@ require("dotenv").config();
 const express = require("express");
 const multer = require("multer");
 const path = require("path");
+const cloudinary = require("cloudinary").v2;
+const { CloudinaryStorage } = require("multer-storage-cloudinary");
 
 const app = express();
 
@@ -20,9 +22,6 @@ const upload = multer({ storage });
 app.get("/", (req, res) => {
     res.sendFile(__dirname + "/public/Fotos.html");
 });
-
-const cloudinary = require("cloudinary").v2;
-const { CloudinaryStorage } = require("multer-storage-cloudinary");
 
 // Configurar Cloudinary
 
@@ -55,3 +54,4 @@ const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
     console.log("Servidor corriendo");
 });
+
