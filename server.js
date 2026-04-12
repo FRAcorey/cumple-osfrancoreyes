@@ -16,6 +16,10 @@ const storage = multer.diskStorage({
 
 const upload = multer({ storage });
 
+app.get("/", (req, res) => {
+    res.sendFile(__dirname + "/public/index.html");
+});
+
 // Servir archivos estáticos
 app.use(express.static("public"));
 app.use("/uploads", express.static("uploads"));
@@ -26,6 +30,7 @@ app.post("/subir", upload.array("fotos"), (req, res) => {
 });
 
 // Iniciar servidor
-app.listen(3000, () => {
-    console.log("Servidor en http://localhost:3000");
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+    console.log("Servidor corriendo");
 });
