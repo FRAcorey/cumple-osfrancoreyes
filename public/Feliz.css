@@ -1,5 +1,5 @@
 body {
-    background-color: rgb(5, 173, 159);
+    background-color: rgb(255, 255, 255);
 }
 .Titulo-P{
     color: rgb(116, 2, 2);
@@ -14,11 +14,18 @@ body {
     text-align: left;
     margin-top: 100px;
 }
-
+div{
+    background-color: #0b046b;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    color: #ffffff;
+}
 
 button {
-    background-color: rgb(34, 231, 8);   /* color de fondo */
-    color: rgb(252, 252, 252);             /* color del texto */
+    background-color: rgb(12, 4, 128);   /* color de fondo */
+    color: rgba(255, 205, 205, 0.863);             /* color del texto */
     padding: 10px 20px;       /* tamaño interno */
     border-radius: 10px;      /* bordes redondeados */
     cursor: pointer;          /* cambia el cursor */
@@ -52,12 +59,6 @@ button:hover::before {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
     gap: 10px;
-}
-#galeria img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-    transition: transform 0.3s, box-shadow 0.3s;
 }
 
 @media (max-width: 600px) {
