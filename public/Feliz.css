@@ -48,12 +48,6 @@ button::before {
 button:hover::before {
     left: 100%;
 }
-.botns {
-    display: flex;              /* usa flexbox para alinear los botones */
-    justify-content: center;    /* centra los botones horizontalmente */
-    gap: 20px;                 /* espacio entre los botones */
-    margin-top: 50px;          /* espacio superior */
-}
 
 #galeria {
     display: grid;
