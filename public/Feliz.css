@@ -2,18 +2,18 @@ body {
     background-color: rgb(255, 255, 255);
 }
 .Titulo-P{
-    color: rgb(116, 2, 2);
+    color: rgb(240, 4, 4);
     font-size: 50px;
     text-align: center;
     margin-top: 50px;
 }
-
-.Texto{
-    color: rgb(218, 179, 8);
+h1{
+    color: rgb(10, 9, 9);
     font-size: 30px;
-    text-align: left;
-    margin-top: 100px;
+    text-align: center;
+    margin-top: 20px;
 }
+
 div{
     background-color: #0b046b;
     padding: 20px;
