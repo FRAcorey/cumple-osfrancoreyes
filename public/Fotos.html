@@ -17,7 +17,7 @@
         Elegir foto
     </button>
 
-    <input type="file" id="archivo" name="fotos" accept="image/*" multiple hidden onchange="mostrarImagen(event)">
+    <input type="file" id="archivo" name="fotos" accept="image/*" style="display:none;" onchange="mostrarImagen(event)">
 
     <br><br>
 
@@ -35,10 +35,15 @@
     <script>
 
         function mostrarImagen(event) {
-        const img = document.getElementById("preview");
-        img.src = URL.createObjectURL(event.target.files[0]);
-        }
+    const file = event.target.files[0];
+
+    if (!file) return;
+
+    const img = document.getElementById("preview");
+    img.src = URL.createObjectURL(file);
+}
     </script>
+
     <script>
     async function cargarImagenes() {
     const res = await fetch("/imagenes");
@@ -77,7 +82,7 @@ form.addEventListener("submit", async (e) => {
     // 👇 recargar galería
     cargarImagenes();
 });
-</script>
+    </script>
 
 
     </body>
