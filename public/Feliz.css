@@ -56,14 +56,17 @@ button:hover::before {
 }
 #galeria img {
     width: 100%;
-    height: auto;
+    height: 150px;
+    object-fit: cover;
     border-radius: 10px;
-    transition: transform 0.3s, box-shadow 0.3s;
+    transform: scale(1.05);
+    transition: 0.3s;
+
 }
 
 @media (max-width: 600px) {
     body {
-        background-color: lightgray;
+        background-color: rgb(206, 201, 201);
     }
 
     button {
