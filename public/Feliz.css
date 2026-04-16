@@ -81,6 +81,20 @@ button:hover::before {
     left: 100%;
 }
 
+.fondoVideo {
+    width: 40%;
+    height: 30%;
+    display: block;
+    margin: 0 auto;
+    border-radius: 5px;
+    border-color: #110e0e;
+    border-width: 4px;
+    border-style: solid;
+
+    object-fit: cover;
+    z-index: -1;
+}
+
 #galeria {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
@@ -98,8 +112,24 @@ button:hover::before {
 
 @media (max-width: 600px) {
     body {
-    background:#67939b;
+    background: linear-gradient(270deg, #ff7a00, #ff4d4d, #ff85a1);
+    background-size: 600% 600%;
+
+    animation: moverFondo 8s ease infinite;
     color: white;
+}
+
+/* animación */
+@keyframes moverFondo {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
     button {
