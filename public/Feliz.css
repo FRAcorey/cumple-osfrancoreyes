@@ -49,7 +49,7 @@ h1{
 div{
     background-color: #67939b;
     padding: 20px;
-    border:none #110e0e;
+    border: 2px solid #110e0e;
     border-radius: 10px;
     text-align: center;
     font-family:'Courier New', Courier, monospace;
@@ -116,7 +116,7 @@ button:hover::before {
     background-size: 600% 600%;
 
     animation: moverFondo 8s ease infinite;
-    color: white;
+    color: rgb(0, 0, 0);
 }
 
 /* animación */
