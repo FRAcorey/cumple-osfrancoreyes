@@ -79,6 +79,18 @@ button:hover::before {
     margin: 0 auto;
 }
 .ubicacion {
+        background-color: #1b1f1d;
+        padding: 25px 50px;
+        border-radius: 10px;
+        position: relative;
+        text-align: center;
+        font-style: italic;
+        margin-top: 20px;
+        font-size: 20px; 
+        display: block;
+        margin: 0 auto;
+}
+.asistencia {
     background-color: #1b1f1d;
     padding: 25px 50px;
     border-radius: 10px;

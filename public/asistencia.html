@@ -8,41 +8,46 @@
 </head>
 <body>
 
-<h1>Confirme su asistencia</h1>
+<div>
+    <h1>Confirme su asistencia</h1>
+    <p>¿Vas a asistir al cumpleaños?</p>
+    <p>Por favor, confirma tu asistencia para ayudar a planear el evento. No es necesario que respondas ahora mismo, pero antes si es antes del 25 de mayo mejor.</p>
+</div>
 
-<form id="formNombre">
-    <input type="text" name="nombre" placeholder="Nombre" required>
-    <input type="text" name="apellido" placeholder="Apellido" required>
-    <button type="submit">Guardar</button>
+
+<form id="formAsistencia">
+    <button type="submit" data-valor="true">Sí voy </button>
+    <button type="submit" data-valor="false">No voy </button>
 </form>
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
 
 <script>
-const cliente = supabase.createClient(
+    document.addEventListener("DOMContentLoaded", () => {
+        const cliente = supabase.createClient(
     "https://fjiabjaovullgvzchgxy.supabase.co",
     "sb_publishable_IKlz5qC_uerRcV9JD9qkwg_Q8wXIKxQ"
-);
+    );
+});
 
-const form = document.getElementById("formNombre");
+const form = document.getElementById("formAsistencia");
 
-form.addEventListener("submit", async (e) => {
-    e.preventDefault();
+form.addEventListener("click", async (e) => {
+    if (e.target.tagName === "BUTTON") {
 
-    const nombre = form.nombre.value;
-    const apellido = form.apellido.value;
+        const valor = e.target.dataset.valor === "true";
 
-    const { error } = await cliente
-        .from("nombres")
-        .insert([{ nombre, apellido }]);
+        const { error } = await cliente
+            .from("asistencia") // o "nombres" si no la cambiaste
+            .insert([{ asiste: valor }]);
 
-    if (error) {
-        console.log("ERROR REAL:", error);
-        alert("Error al guardar");
-    } else {
-        console.log("OK:", nombre, apellido);
-        alert("Guardado 😎");
-    }   
+        if (error) {
+            console.log(error);
+            alert("Error al confirmar asistencia");
+        } else {
+            alert(valor ? "Confirmaste asistencia " : "Ok, no asistís ");
+        }
+    }
 });
 </script>
 
