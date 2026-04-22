@@ -5,20 +5,20 @@ body {
     background-repeat: no-repeat;
 }
 .Titulo-P{
-    color: rgb(31, 15, 15);
+    color: rgb(255, 255, 255);
     font-size: 50px;
     text-align: center;
     margin-top: 50px;
 }
 .text2{
-    color: rgb(31, 15, 15);
+    color: rgb(255, 255, 255);
     font-size: 25px;
     text-align: left;
     margin-top: 20px;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 h1{
-    color: rgb(10, 9, 9);
+    color: rgb(255, 255, 255);
     font-size: 30px;
     text-align: center;
     margin-top: 20px;
@@ -93,15 +93,15 @@ button:hover::before {
 }
 .asistencia {
     background-color: #1b1f1d;
-    padding: 25px 50px;
-    border-radius: 10px;
-    position: relative;
-    text-align: center;
-    font-style: italic;
-    margin-top: 20px;
-    font-size: 20px; 
-    display: block;
-    margin: 0 auto;
+        padding: 25px 50px;
+        border-radius: 10px;
+        position: relative;
+        text-align: center;
+        font-style: italic;
+        margin-top: 20px;
+        font-size: 20px; 
+        display: block;
+        margin: 0 auto;
 }
 
 .fondoVideo {
