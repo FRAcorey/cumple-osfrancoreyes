@@ -39,7 +39,7 @@ async function guardar(valor) {
         console.log("Click detectado:", valor);
 
         const { error } = await cliente
-            .from("asistencia")
+            .from("asistencias")
             .insert([{ asiste: valor }]);
 
         if (error) {
