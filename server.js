@@ -42,7 +42,9 @@ app.get("/horario", (req, res) => {
 app.get("/asistencia", (req, res) => {
     res.sendFile(path.join(__dirname, "public", "asistencia.html"));
 });
-
+app.get("/regalo", (req, res) => {
+    res.sendFile(path.join(__dirname, "public", "regalo.html"));
+}
 
 // ✅ UNA sola ruta POST
 app.post("/Fotos", upload.array("fotos"), (req, res) => {
