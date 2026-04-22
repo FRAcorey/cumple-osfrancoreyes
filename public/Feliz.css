@@ -113,16 +113,19 @@ button:hover::before {
 
 .fondoVideo {
     width: 100%;
-    height: auto;
     display: block;
-    margin: 0 auto;
-    border-radius: 5px;
-    border-color: #110e0e;
-    border-width: 4px;
-    border-style: solid;
 
-    object-fit: cover;
-    z-index: -1;
+    -webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%),
+                        url("https://i.imgur.com/8Km9tLL.png");
+    -webkit-mask-size: 100% 100%, 100% 50px;
+    -webkit-mask-position: top, bottom;
+    -webkit-mask-repeat: no-repeat;
+
+    mask-image: linear-gradient(to bottom, black 80%, transparent 100%),
+                url("https://i.imgur.com/8Km9tLL.png");
+    mask-size: 100% 100%, 100% 50px;
+    mask-position: top, bottom;
+    mask-repeat: no-repeat;;
 }
 
 #galeria {
