@@ -17,6 +17,13 @@ body {
     margin-top: 20px;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
+.text-asiste{
+    color: rgb(0, 0, 0);
+    font-size: 25px;
+    text-align: left;
+    margin-top: 20px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
 h1{
     color: rgb(255, 255, 255);
     font-size: 30px;
@@ -139,6 +146,7 @@ button:hover::before {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    min-height: 100vh; /* 🔥 clave */
 }
     button {
         font-size: 18px;
